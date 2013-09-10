@@ -56,3 +56,11 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+module NavigationHelpers
+  def path_to page_name
+    case page_name
+      when /the home\s?page/
+        '/'        
+    end
+  end
+end
